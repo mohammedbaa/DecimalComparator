@@ -1,0 +1,18 @@
+package Java.P;
+
+public class DecimalComparator {
+    public static boolean areEqualByThreeDecimalPlaces (double First,double Second){
+    // if one are posative and the other one is negative there is no way to be the 2 numbers are equal
+        if (First <0 && Second >0 || First >0 && Second <0){
+            return false;
+        }
+        // we multi by 1000 we want the 3 values so 3.1252*1000 = 3125.2 so if i take the int value it will be 3125
+        else if((int)(First*1000) == (int)(Second*1000)){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+}
